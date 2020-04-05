@@ -1,7 +1,10 @@
 #!/bin/sh
 
 # Set keyboard as 'us' layout
-sudo sed -i 's/XKBLAYOUT=.*/XKBLAYOUT="us"/' /etc/default/keyboard`
+sudo sed -i 's/XKBLAYOUT=.*/XKBLAYOUT="us"/' /etc/default/keyboard
+
+# Set timezone
+sudo timedatectl set-timezone America/Winnipeg
 
 # Rename host
 read -p "New hostname for device: " HOSTNAME
