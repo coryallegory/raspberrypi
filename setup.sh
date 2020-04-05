@@ -1,3 +1,4 @@
+#!/bin/sh
 
 # Set keyboard as 'us' layout
 sudo sed -i 's/XKBLAYOUT=.*/XKBLAYOUT="us"/' /etc/default/keyboard`
@@ -16,4 +17,10 @@ read -sp 'Wifi Passphrase: ' PASSPHRASE
 wpa_passphrase $SSID $PASSPHRASE | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf > /dev/null
 wpa_cli -i wlan0 reconfigure
 
-reboot
+# Setup new admin
+sudo useradd -m falconer -G sudo
+echo 'Change admin password: '
+sudo passwd falconer
+sudo passwd --lock pi
+
+sudo reboot
