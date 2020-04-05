@@ -2,10 +2,11 @@
 
 # Provisioning
 
-1. Install vanilla Raspbian on an SD card (Buster Lite at the time of writing)
+1. Install vanilla Raspbian on an SD card (Buster Lite at the time of writing).
    1. https://www.raspberrypi.org/downloads/raspbian/
-1. Booth raspberry pi with SD card
-1. Login with user pi, password raspberry
+1. Add a file named `ssh` to the root of the SD card (boot partition), to enable SSH.
+1. Connect raspberry pi to ethernet and boot with SD card.
+1. Use Putty to SSH to `raspberrypi`. Login with user `pi`, password `raspberry`.
 1. Execute setup script
    1. `bash <(curl -s https://github.com/coryallegory/blackbird/blob/master/setup.sh)`
 1. Wait for device to reboot, reconnect with new user account
