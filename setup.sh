@@ -12,7 +12,7 @@ sudo sed -i "s/127\.0\.1\.1.*/127\.0\.1\.1\t\t$HOSTNAME/" /etc/hosts
 echo $HOSTNAME | sudo tee /etc/hostname
 
 # Enable ssh
-sudo systemctl enable ssh && sudo systemctl start ssh
+# sudo systemctl enable ssh && sudo systemctl start ssh
 
 # (Optional) Enable wifi
 read -p 'Wifi SSID: ' SSID
