@@ -18,7 +18,7 @@ echo $HOSTNAME | sudo tee /etc/hostname
 read -p 'Wifi SSID: ' SSID
 read -sp 'Wifi Passphrase: ' PASSPHRASE
 wpa_passphrase $SSID $PASSPHRASE | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf > /dev/null
-wpa_cli -i wlan0 reconfigure
+sudo wpa_cli -i wlan0 reconfigure
 
 sudo apt-get update && sudo apt-get -y upgrade
 

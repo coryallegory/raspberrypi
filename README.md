@@ -10,7 +10,8 @@ This repository is intended as a reference for various raspberry pi experiments.
 1. Connect raspberry pi to ethernet and boot with SD card.
 1. Use Putty to SSH to `raspberrypi`. Login with user `pi`, password `raspberry`.
 1. Execute setup script
-   1. `sudo bash <(curl -s https://github.com/coryallegory/blackbird/blob/master/setup.sh)`
+   1. `curl https://raw.githubusercontent.com/coryallegory/raspberrypi/master/setup.sh -o /tmp/setup.sh`
+   1. `sudo bash /tmp/setup.sh`
 
 # Installing Docker & Docker-Compose
 
