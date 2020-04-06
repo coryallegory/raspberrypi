@@ -13,6 +13,10 @@ This repository is intended as a reference for various raspberry pi experiments.
    1. `curl https://raw.githubusercontent.com/coryallegory/raspberrypi/master/setup.sh -o /tmp/setup.sh`
    1. `sudo bash /tmp/setup.sh`
 
+# Interactive Config
+
+1. `raspi-config` to modify locale settings, localization and wifi country.
+
 # Installing Docker & Docker-Compose
 
 1. Install Docker & Docker-Compose https://docs.docker.com/install/linux/docker-ce/debian/#install-using-the-convenience-script
